@@ -41,16 +41,13 @@ class AI {
         dates.put(context.getString(R.string.before_new_year), new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR) + 1,Calendar.JANUARY, 1));
 
         Calendar today = Calendar.getInstance();
-        //today.set(today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DATE));
         dates.put(context.getString(R.string.today),today);
 
         Calendar tomorrow = Calendar.getInstance();
-        //tomorrow.set(tomorrow.get(Calendar.YEAR), tomorrow.get(Calendar.MONTH), tomorrow.get(Calendar.DATE));
         tomorrow.add(Calendar.DATE,1);
         dates.put(context.getString(R.string.tomorrow),tomorrow);
 
         Calendar yesterday = Calendar.getInstance();
-        //yesterday.set(yesterday.get(Calendar.YEAR), yesterday.get(Calendar.MONTH), yesterday.get(Calendar.DATE));
         yesterday.add(Calendar.DATE,-1);
         dates.put(context.getString(R.string.yesterday), yesterday);
         return dates;
